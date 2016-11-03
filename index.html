@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Eva Ding | Flautist</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Theme CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div id="navbar" class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top"> Eva Ding </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About Me</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#repertoire">Repertoire</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#media">Media</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Eva Ding</h1>
+                        <p class="intro-text">Concert flautist.</p>
+                        <a href="#about" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>About Me</h2>
+                <p>Shanghai-born, Auckland-raised Eva Ding fell in love with the flute at age 8, and is currently studying Performance Flute with Professor Uwe Grodd as the recipient of a prestigious University of Auckland Undergraduate Scholarship.</p>
+
+               <a id="about-button-show" class="btn btn-circle page-scroll" onclick="showAboutExtraInfo()">
+                    <i class="fa fa-angle-double-down animated"></i>
+                </a>
+                
+                <div id="about-extra-info" class="about-extra-info"><p>Having been a member of the Auckland Youth Orchestra since 2013, Eva is an experienced orchestral player. In recognition of her potential as a musician, she has been awarded scholarships from organisations including the Pettman National Junior Academy, the Auckland Philharmonia Orchestra, and the New Zealand Symphony Orchestra. However, Eva also has an impressive record as a soloist: she has recently been the recipient of the National Young Performer Award, the Anthony Jennings Memorial Award, and the Tauranga Performing Arts Competitions Society Carey Concerto and Smith Shield Awards.</p>
+                 
+                <p>Eva has been a featured soloist at various musical and cultural events, including at the Auckland Lantern Festival, the Friends of the Auckland Philharmonia Orchestra, University of Auckland graduation ceremonies, Auckland Symphony Orchestra’s “American Beauty” concert, and the “Meet in Beijing” festival in China with the Aotea Youth Symphony. She has been interviewed by New Zealand Chinese TV33, and spoke about her involvement in Auckland’s musical life and her many community performances.</p>
+                 
+                <p>Recently returned from a six-month exchange to the University of California in Los Angeles, Eva is brimming with inspiration from her time abroad, and was fortunate to have had the opportunity to take lessons with flute professors from elite music schools Julliard and Eastman. Upon completion of her undergraduate degree, she intends to continue her studies in performance flute, and will pursue a Master of Music.</p>
+                 
+                <p>In her spare time, Eva plays with her poodle Chocco, who adores singing along to her flute practice.</p></div>
+
+                <a id="about-button-hide" class="btn btn-circle page-scroll" onclick="hideAboutExtraInfo()">
+                    <i class="fa fa-angle-double-up animated"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repertoire Section -->
+    <section id="repertoire" class="section-yellow container content-section text-center ">
+        <div class="section-yellow">
+            <div class="container">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Repertoire</h2>
+                    <div class="row text-center">
+                        <a id="baroque-btn" onclick="displayRep('baroque')" class="btn menu-anchor active">Baroque</a>
+                        <a id="classical-btn" onclick="displayRep('classical')" class="btn menu-anchor">Classical</a>
+                        <a id="romantic-btn" onclick="displayRep('romantic')" class="btn menu-anchor">Romantic</a>
+                        <a id="century-btn" onclick="displayRep('century')" class="btn menu-anchor">20th/21st Century</a>
+                        <a id="chamber-btn" onclick="displayRep('chamber')" class="btn menu-anchor">Chamber Music</a>
+                    </div>
+                    <p id="baroque" class="rep-list active">
+                        BACH, C.P.E. – Sonata in A minor<br/>
+                        BACH, J.S. – Sonata in B minor<br/>
+                        BACH, J.S. – Sonata in C major<br/>
+                        BACH, J.S. – Sonata in E major<br/>
+                        BACH, J.S. – Sonata in E minor<br/>
+                        VIVALDI, Antonio – “Il pastor fido” Sonata in G minor<br/>
+                        VIVALDI, Antonio – Concerto in C Major for Piccolo, Strings & Harpsichord RV 443</p>
+                    <p id="classical" class="rep-list">
+                        MOZART, W.A – Concerto in G major <br/>
+                        MOZART, W.A – Concerto in D major</p>
+                    <p id="romantic" class="rep-list">
+                        BORNE, François – Fantaisie brillante sur ‘Carmen’ (Carmen Fantasy) <br/>
+                        CHAMINADE, Cécil – Concertino pour Flûte<br/>
+                        ENESCU, George – Cantabile et Presto<br/>
+                        FAURÉ, Gabriel – Fantaisie, Op.79<br/>
+                        POULENC, Francis – Sonate pour flüte et piano<br/> 
+                        REINECKE, Carl Heinrich – Ballade, Op.288<br/>
+                    </p>
+                    <p id="century" class="rep-list">
+                        BOZZA, Eugène – Image pour flute seule <br/>
+                        CHEN, Yi – The Golden Flute Concerto <br/>
+                        CLARKE, Ian – The Great Train Race <br/>
+                        CLARKE, Ian – Zoom Tube<br/>
+                        COPLAND, Aaron – Duo for Flute and Piano<br/>
+                        DUTILLEUX, Henri – Sonatine pour Flûte et Piano<br/>
+                        HOOVER, Katherine – “Demon’s Dance” from Medieval Suite <br/>
+                        JOLIVET, André – Chant de Linos<br/>
+                        MEWS, Douglas – Tango Fantastique<br/>
+                        NIELSEN, Carl – Flute Concerto<br/>
+                        PIAZZOLLA, Astor – Tango Etude No.6<br/>
+                        RITCHIE, Anthony – Flute Concerto<br/>
+                    </p>
+                    <p id="chamber" class="rep-list">
+                        CRUMB, George – Vox Balaenae<br/>
+                        DURUFLÉ, Maurice – Prelude, recitatif et variations Op.3 <br/>
+                        GAUBERT, Philippe – Trios Aquarelles<br/>
+                        MOWER, Mike – Fictions for Four Flutes <br/>
+                        PIAZZOLLA, Astor – Histoire du Tango <br/>
+                        TAKAHASHI, Shin’ya – Seven Pieces for Flute Trio <br/>
+                        VOGLAR, Sojar – Yearning for Flute <br/>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media Section -->
+    <section id="media" class="section-white container content-section text-center">
+        <div class="row section-white">
+            <div id="myCarousel" class="carousel slide"  data-interval="false">
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <h2>Media</h2>
+                        <!-- LightWidget WIDGET --><script src="http://lightwidget.com/widgets/lightwidget.js"></script><iframe src="http://lightwidget.com/widgets/ba7d61b8310a5b8ead3e13307050b412.html" id="lightwidget_ba7d61b831" name="lightwidget_ba7d61b831"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+                    </div>
+                </div>
+
+                <div class="item">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/tX8d8Y79IGs" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="item">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/rpq4ln6xsF4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="item">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/obVaThyyTh4" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="item">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/UTVRx7VCim0" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="item">
+                  <iframe src="https://player.vimeo.com/video/186352384" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+                <div class="item">
+                    <embed wmode="direct" flashvars="vid=y0158nz2sa9&amp;tpid=0&amp;showend=1&amp;showcfg=1&amp;searchbar=1&amp;pic=//shp.qpic.cn/qqvideo_ori/0/y0158nz2sa9_496_280/0&amp;skin=http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf&amp;shownext=1&amp;list=2&amp;autoplay=0" src="http://imgcache.qq.com/tencentvideo_v1/player/TPout.swf?max_age=86400&amp;v=20140714" quality="high" name="tenvideo_flash_player_1478137054447" id="tenvideo_flash_player_1478137054447" bgcolor="#000000" width="670px" height="502px" align="middle" allowscriptaccess="always" allowfullscreen="true" type="application/x-shockwave-flash" pluginspage="http://get.adobe.com/cn/flashplayer/">
+                </div>
+
+              </div>
+
+              <!-- Left and right controls -->
+              <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container section-yellow text-center ">
+        <div class="row section-yellow">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact</h2>
+                <p><a href="mailto:Eva_Ding@rocketmail.com" class="link-white">Eva_Ding@rocketmail.com</a></p>
+                <ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-instagram fa-fw"></i> <span class="network-name">Instagram</span></a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Made by <a href="http://nicole.codes" class="link-yellow">Nicole Wilcox</a> for Eva Ding</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/grayscale.min.js"></script>
+
+    <script>
+        var currentRepID = "baroque"; // This holds the id of the repertoire section being shown
+
+        function showAboutExtraInfo() {
+            $('#about-button-show').hide();
+            $('#about-extra-info').fadeIn(1000);
+            $('#about-button-hide').show();
+        }
+        function hideAboutExtraInfo() {
+            $('#about-button-hide').hide();
+            $('#about-extra-info').fadeOut(300);
+            $('#about-button-show').show();
+            window.location = '#about';
+        }
+        function displayRep(id) { // Displaying repertoire
+            if (id != currentRepID) { // If we've clicked on a new section
+                $('#'+currentRepID+"-btn").removeClass('active');// Set the active category button
+                $('#'+id+"-btn").addClass('active');// Set the active category button
+                $('#'+currentRepID).hide(); // Hide the old category info
+                $('#'+id).fadeIn(700); // Display the new category info
+            }
+            currentRepID = id;
+        }
+    </script>
+
+</body>
+
+</html>

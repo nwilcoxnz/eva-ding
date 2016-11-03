@@ -1,0 +1,46 @@
+.about-extra-info {
+	display: none;
+}
+#about-button-show, #about-button-hide {
+	color: #f2d835;
+}
+#about-button-hide {
+	display: none;
+}
+.link-white {
+	color: #fff;
+}
+.link-yellow {
+	color: #f2d835;
+}
+.btn-default:hover {
+	color: #fff;
+}
+#about {
+	padding-bottom: 50px;
+}
+.menu-anchor {
+	padding-left: 10px;
+	padding-right: 10px;
+	font-size: 15px;
+	text-transform: uppercase;
+	font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.rep-list {
+	margin-top: 20px;
+	font-size: 15px;
+	display: none;
+}
+.rep-list.active {
+	display: block;
+}
+.btn.active, .btn:active {
+	color: #fff;
+}
+.carousel-control.left, .carousel-control.right {
+    background-image: none;
+    vertical-align: middle;
+    top:50%;
+    color: #f2d835;
+    font-size: 35px;
+}
