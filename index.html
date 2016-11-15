@@ -179,7 +179,7 @@
 
     <!-- Media Section -->
     <section id="media" class="section-white container content-section text-center">
-        <div class="row section-white">
+        <div class="section-white">
             <div id="myCarousel" class="carousel slide"  data-interval="false">
               <!-- Wrapper for slides -->
               <div class="carousel-inner" role="listbox">
@@ -189,26 +189,36 @@
                         <!-- LightWidget WIDGET --><script src="http://lightwidget.com/widgets/lightwidget.js"></script><iframe src="http://lightwidget.com/widgets/ba7d61b8310a5b8ead3e13307050b412.html" id="lightwidget_ba7d61b831" name="lightwidget_ba7d61b831"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
                     </div>
                 </div>
-
                 <div class="item">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/tX8d8Y79IGs" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/tX8d8Y79IGs" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div class="item">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/rpq4ln6xsF4" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-container">
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/rpq4ln6xsF4" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div class="item">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/obVaThyyTh4" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/obVaThyyTh4" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div class="item">
-                  <iframe width="560" height="315" src="https://www.youtube.com/embed/UTVRx7VCim0" frameborder="0" allowfullscreen></iframe>
+                    <div class="video-container">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/UTVRx7VCim0" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div class="item">
-                  <iframe src="https://player.vimeo.com/video/186352384" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    <div class="video-container">
+                        <iframe src="https://player.vimeo.com/video/186352384" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
                 </div>
-                <div class="item">
-                    <embed wmode="direct" flashvars="vid=y0158nz2sa9&amp;tpid=0&amp;showend=1&amp;showcfg=1&amp;searchbar=1&amp;pic=//shp.qpic.cn/qqvideo_ori/0/y0158nz2sa9_496_280/0&amp;skin=http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf&amp;shownext=1&amp;list=2&amp;autoplay=0" src="http://imgcache.qq.com/tencentvideo_v1/player/TPout.swf?max_age=86400&amp;v=20140714" quality="high" name="tenvideo_flash_player_1478137054447" id="tenvideo_flash_player_1478137054447" bgcolor="#000000" width="670px" height="502px" align="middle" allowfullscreen="true" type="application/x-shockwave-flash" pluginspage="http://get.adobe.com/cn/flashplayer/">
+                <div class="item" id="desktop-only-video">
+                    <div class="video-container">
+                        <embed wmode="direct" flashvars="vid=y0158nz2sa9&amp;tpid=0&amp;showend=1&amp;showcfg=1&amp;searchbar=1&amp;pic=//shp.qpic.cn/qqvideo_ori/0/y0158nz2sa9_496_280/0&amp;skin=http://imgcache.qq.com/minivideo_v1/vd/res/skins/TencentPlayerMiniSkin.swf&amp;shownext=1&amp;list=2&amp;autoplay=0" src="http://imgcache.qq.com/tencentvideo_v1/player/TPout.swf?max_age=86400&amp;v=20140714" quality="high" name="tenvideo_flash_player_1478137054447" id="tenvideo_flash_player_1478137054447" bgcolor="#000000" width="670px" height="502px" align="middle" allowfullscreen="true" type="application/x-shockwave-flash" pluginspage="http://get.adobe.com/cn/flashplayer/">
+                    </div>
                 </div>
-
               </div>
 
               <!-- Left and right controls -->
@@ -227,7 +237,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="container section-yellow text-center ">
-        <div class="row section-yellow">
+        <div class="section-yellow">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact</h2>
                 <p><a href="mailto:Eva_Ding@rocketmail.com" class="link-white">Eva_Ding@rocketmail.com</a></p>
@@ -267,6 +277,30 @@
 
     <script>
         var currentRepID = "baroque"; // This holds the id of the repertoire section being shown
+        var isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+            }
+        };
+
+        window.onload = function() {
+          if (!isMobile) $('desktop-only-video').hide();
+        };
 
         function showAboutExtraInfo() {
             $('#about-button-show').hide();
